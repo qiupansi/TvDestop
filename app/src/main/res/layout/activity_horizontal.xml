@@ -1,0 +1,254 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@mipmap/bg_lancher"
+    android:focusable="false">
+
+    <LinearLayout
+        android:id="@+id/rl_time_weather"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="50dp"
+        android:layout_marginLeft="400dp"
+        android:layout_marginTop="50dp"
+        android:focusable="false"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/iv_temperature"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+
+        <LinearLayout
+            android:id="@+id/layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="bottom"
+                android:text="ShenZhen"
+                android:textColor="@color/white_80"
+                android:textSize="40dp" />
+
+            <TextView
+                android:id="@+id/tv_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="China"
+                android:textColor="@color/white_40"
+                android:textSize="30dp" />
+
+            <TextView
+                android:id="@+id/tv_temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="27℃~22℃"
+                android:textColor="@color/white_40"
+                android:textSize="30dp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="80dp"
+            android:paddingLeft="5dp"
+            android:text="00:00"
+            android:textColor="@color/white_100"
+            android:textSize="94dp"
+            android:textStyle="normal" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/tv_show_reflected_img"
+        android:layout_width="1080dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="640dp"
+        android:scaleType="fitXY" />
+
+    <com.diyo.activity.desktop.view.SmoothHorizontalScrollView
+        android:id="@+id/id_horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_vertical"
+        android:layout_toLeftOf="@+id/icon_right"
+        android:layout_toRightOf="@+id/icon_left"
+        android:focusable="false"
+        android:nextFocusDown="@+id/tv_show_po_0"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/id_gallery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:focusable="false"
+            android:orientation="horizontal" />
+    </com.diyo.activity.desktop.view.SmoothHorizontalScrollView>
+
+
+    <LinearLayout
+        android:id="@+id/tv_show_layout"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:layout_marginLeft="100dp"
+        android:layout_below="@id/id_horizontal"
+        android:orientation="horizontal">
+
+        <FrameLayout
+            android:id="@+id/tv_show_fl_0"
+            style="@style/Focusable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:nextFocusRight="@+id/tv_show_fl_1"
+            android:translationY="12dp"
+            android:translationX="10dp">
+
+            <ImageView
+                android:id="@+id/tv_show_post_0"
+                android:layout_width="200dip"
+                android:layout_height="200dip"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:id="@+id/tv_show_log_0"
+                android:layout_width="200dip"
+                android:layout_height="200dip"
+                android:src="@mipmap/tv_live" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tv_show_fl_1"
+            style="@style/Focusable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:nextFocusRight="@+id/tv_show_fl_2"
+            android:translationY="12dp"
+            android:translationX="10dp">
+
+            <ImageView
+                android:id="@+id/tv_show_post_1"
+                android:layout_width="200dip"
+                android:layout_height="200dip"
+                android:scaleType="fitXY"/>
+
+            <ImageView
+                android:id="@+id/tv_show_log_1"
+                android:layout_width="200dip"
+                android:layout_height="200dip"
+                android:src="@mipmap/tv_collection" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tv_show_fl_2"
+            style="@style/Focusable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:nextFocusLeft="@+id/tv_show_fl_1"
+            android:nextFocusRight="@+id/tv_show_fl_3"
+            android:translationY="12dp"
+            android:translationX="10dp">
+
+            <ImageView
+                android:id="@+id/tv_show_post_2"
+                android:layout_width="200dip"
+                android:layout_height="200dip"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/tv_show_log_2"
+                android:layout_width="200dip"
+                android:layout_height="200dip"
+                android:src="@mipmap/tv_back" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tv_show_fl_3"
+            style="@style/Focusable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:nextFocusLeft="@+id/tv_show_fl_2"
+            android:nextFocusRight="@+id/tv_show_fl_4"
+            android:translationY="12dp"
+            android:translationX="10dp">
+
+            <ImageView
+                android:id="@+id/tv_show_post_3"
+                android:layout_width="200dip"
+                android:layout_height="200dip"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/tv_show_log_3"
+                android:layout_width="200dip"
+                android:layout_height="200dip"
+                android:src="@mipmap/tv_user" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/tv_show_fl_4"
+            style="@style/Focusable"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:nextFocusLeft="@+id/tv_show_fl_3"
+            android:translationY="12dp"
+            android:translationX="10dp">
+
+            <ImageView
+                android:id="@+id/tv_show_post_4"
+                android:layout_width="200dip"
+                android:layout_height="200dip"
+                android:scaleType="fitXY" />
+
+            <ImageView
+                android:id="@+id/tv_show_log_4"
+                android:layout_width="200dip"
+                android:layout_height="200dip"
+                android:src="@mipmap/tv_user" />
+        </FrameLayout>
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/apps_iv_cover"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:scaleType="fitXY"
+        android:src="@drawable/white_border"
+        android:visibility="gone" />
+
+    <ImageView
+        android:id="@+id/icon_left"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:src="@mipmap/arrow_left" />
+
+    <ImageView
+        android:id="@+id/icon_right"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginRight="10dp"
+        android:src="@mipmap/arrow_right" />
+
+</RelativeLayout>
